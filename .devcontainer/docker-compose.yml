@@ -1,0 +1,27 @@
+# File: .devcontainer/docker-compose.yml
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    # Carga variables de entorno si existen (opcional para arrancar)
+    env_file:
+      - path: .env
+        required: false
+
+    # Comando para mantener vivo el contenedor
+    command: sleep infinity
+
+    # Red y Puertos
+    network_mode: bridge
+    ports:
+      - "4321:4321" # Puerto estándar de Astro
+
+    # Límites para estabilidad (evita que Vite consuma toda tu RAM)
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+
+    user: node
