@@ -1,0 +1,82 @@
+{
+    "extends": "astro/tsconfigs/strict",
+    "compilerOptions": {
+        // --- PATH ALIASES ---
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ],
+            "@ui/*": [
+                "src/components/ui/*"
+            ],
+            "@modules/*": [
+                "src/modules/*"
+            ],
+            "@lib/*": [
+                "src/lib/*"
+            ],
+            "@assets/*": [
+                "src/assets/*"
+            ]
+        },
+        // --- REACT 19 CONFIGURATION ---
+        "jsx": "react-jsx",
+        "jsxImportSource": "react",
+        // --- MODERN TYPESCRIPT (TS 5.7+) ---
+        "target": "ES2022",
+        "lib": [
+            "ES2023",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        // --- TYPE SAFETY (MÁXIMA SEGURIDAD) ---
+        "strict": true,
+        "strictNullChecks": true,
+        "noUncheckedIndexedAccess": true,
+        "noImplicitOverride": true,
+        "exactOptionalPropertyTypes": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "noPropertyAccessFromIndexSignature": false,
+        // --- IMPORTS & MODULES ---
+        "verbatimModuleSyntax": true,
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "allowImportingTsExtensions": true,
+        // --- PERFORMANCE ---
+        "skipLibCheck": true,
+        "incremental": true,
+        // --- CODE QUALITY ---
+        "forceConsistentCasingInFileNames": true,
+        "allowJs": true,
+        "checkJs": false,
+        // --- SOURCE MAPS (DEBUGGING) ---
+        "sourceMap": true,
+        "declarationMap": false,
+        // --- COMPILER OUTPUT ---
+        "noEmit": true,
+        "removeComments": false,
+        "preserveConstEnums": true
+    },
+    "include": [
+        ".astro/types.d.ts",
+        "src/**/*",
+        "src/**/*.astro"
+    ],
+    "exclude": [
+        "dist",
+        "node_modules",
+        ".astro",
+        ".output",
+        "build",
+        "coverage",
+        "data-products.json",
+        "src/modules/catalog/simulation/data-products.json"
+    ]
+}
