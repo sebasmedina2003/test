@@ -1,5 +1,5 @@
 {
-    "extends": "astro/tsconfigs/strict",
+    "extends": "react/tsconfigs/strict",
     "compilerOptions": {
         // --- PATH ALIASES ---
         "baseUrl": ".",

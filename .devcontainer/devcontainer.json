@@ -1,6 +1,6 @@
 // File: .devcontainer/devcontainer.json
 {
-    "name": "Multimax Frontend (Astro + React)",
+    "name": "Test(React)",
     "dockerComposeFile": "docker-compose.yml",
     "service": "app",
     "workspaceFolder": "/workspaces/project-root",
