@@ -4,7 +4,7 @@ dist/
 # Si usas adaptadores específicos (como Netlify o Vercel) a veces crean carpetas temporales:
 .netlify/
 .vercel/
-
+.next
 # --- Dependencies ---
 node_modules/
 # Archivos de caché de gestores de paquetes
